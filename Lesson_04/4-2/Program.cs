@@ -2,6 +2,8 @@
 // 4 -> 24
 // 5 -> 120
 
+// int не вывозит большие числа
+
 int SumMult(int num)
 {
     int all_mult = 1;
