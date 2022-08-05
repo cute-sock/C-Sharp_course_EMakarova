@@ -42,6 +42,6 @@ void SumPosNeg(int[] arr)
     Console.WriteLine($"Positive: {pos}, Negative: {neg}");
 }
 
-int[] arr_1 = MassNums(12, -9, 10);
+int[] arr_1 = MassNum(12,-9,10);
 Print(arr_1);
 SumPosNeg(arr_1);
