@@ -16,29 +16,35 @@ void Print(int[] arr)
     Console.WriteLine();
 }
 
-int[] MassNum(int size, int from, int to)
+int[] MassNums(int size)
 {
     int[] arr = new int[size];
 
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new
-        Random().Next(from, to);
+        arr[i] = new Random().Next(10, 99);
     }
     return arr;
 }
 
-int Nums(int[] arr)
-{
-    int count = 0;
+int InRange(int[] arr)
+{   
+    int n = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] >= 10 && arr[i] <= 99) ;
-        count++;
+        if (arr[i] >= 10 && arr[i] <= 99)
+        {
+            n += 1;            
+        }
     }
-    return count;
+    return n;    
 }
 
-int[] arr_1 = Nums();
+
+int[] arr_1 = MassNums(123);
 Print(arr_1);
-Nums(arr_1);
+Console.WriteLine(InRange(arr_1));
+
+int[] arr_2 = MassNums(123);
+Print(arr_2);
+Console.WriteLine(InRange(arr_2));
