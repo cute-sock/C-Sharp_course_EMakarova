@@ -6,16 +6,13 @@ int sum_2_digits(int num)
 
     for (int i = num; num != 0; num /= 10)
         
-        summa = num + num %10;
+        summa += num % 10;
         // sum += num % 10;
 
     return summa;
 }
 
+Console.WriteLine(sum_2_digits(333));
 
-Console.WriteLine("Insert number: ");
-int summa = int.Parse(Console.ReadLine());
-
-Console.WriteLine(sum_2_digits(summa));
 
 // NB: почему-то при сложении выдает на единицу меньше суммы...
