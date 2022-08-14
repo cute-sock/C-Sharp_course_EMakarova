@@ -5,55 +5,48 @@
 
 void Print(double[] arr)
 {
-    int size = arr.Length;
+int size = arr.Length;
 
-    for (int i = 0; i < size; i++)
-    {
-        Console.Write($"{arr[i]} ");
-    }
-    Console.WriteLine();
-}
-
-
-double[] MassMinMax(int Mas, int x)
+for (int i = 0; i < size; i++)
 {
-    double Max, Min, Answer;
-    Max = Mas[0];
-    Min = Mas[0];
-    for (int i = 0; i < x; i++)
-    {
-        if (Mas[i] > Max)
-            Max = Mas[i];
-        if (Mas[i] < Min)
-            Min = Mas[i];
-    }
-    Answer = Max - Min;
-    Console.WriteLine($"min max value diff {Answer}");
-    return 0;
+    Console.Write($"{arr[i]} ");
+}
+Console.WriteLine();
 }
 
-int main()
+void MassMinMax(double[] Mas)
 {
-    int[] array = new int[10];
-    double Max, Min;
-    int x;
+double Max, Min, Answer;
+Max = Mas[0];
+Min = Mas[0];
+for (int i = 0; i < Mas.Length; i++)
+{
+if (Mas[i] > Max)
+Max = Mas[i];
+if (Mas[i] < Min)
+Min = Mas[i];
+}
+Answer = Max - Min;
+Console.WriteLine($"min max value diff {Answer}");
 
-    do
-    {
-        Console.WriteLine("enter number of array elements: ");
-        x++;
-        if (x < 2 && x > 10);
-    }
-    while (x < 2 && x > 10);
-    for (int i = 0; i < x; i++)
-    {
-        Console.WriteLine($"insert array element {i}");
-       Console.WriteLine(Mas[i]);
-    }
-    
-    MassMinMax(Mas, x);
 }
 
-double[] arr_1 = MassMinMax(10);
+double[] main()
+{
+
+Console.WriteLine("enter number of array elements: ");
+int x = int.Parse(Console.ReadLine());;
+double[] array = new double[x];
+
+for (int i = 0; i < x; i++)
+{
+    Console.WriteLine($"insert array element {i}");
+    array[i] = double.Parse(Console.ReadLine());
+}
+
+return array;
+}
+
+double[] arr_1 = main();
 Print(arr_1);
-main(arr_1);
+MassMinMax(arr_1);
