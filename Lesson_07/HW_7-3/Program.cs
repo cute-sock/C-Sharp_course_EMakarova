@@ -7,3 +7,62 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 // как-то что-то надо сделать с индексами
+
+void Print(int[,] arr)
+{
+    int row_size = arr.GetLength(0);
+    int column_size = arr.GetLength(1);
+
+    for (int i = 0; i < row_size; i++)
+    {
+        for (int j = 0; j < column_size; j++)
+        {
+            Console.Write($" {arr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int[,] MassNums(int row, int column, int from, int to)
+{
+    int[,] arr = new int[row, column];
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            arr[i, j] = new Random().Next(from, to);
+        }
+    }
+    return arr;
+}
+
+void AvgSumColumns(int[,] arr)
+{
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+
+    for (int i = 0; i < row; i++)
+    {
+        double arithmeticMean = 0;
+
+        for (int j = 0; j < column; j++)
+        {
+            arithmeticMean += arr.GetLength(0);
+        }
+
+        arithmeticMean = Math.Round(arithmeticMean / column, 1);
+        Console.WriteLine(AvgSumColumns($"Column # {i + 1} {arithmeticMean}"));
+    }
+}
+
+Console.Write("Enter number of rows: ");
+int.Parse(Console.ReadLine());
+Console.Write("Enter number of columns: ");
+int.Parse(Console.ReadLine());
+
+int[,] arr_1 = MassNums(row, column, 1, 10);
+Print(arr_1);
+
+Console.WriteLine(AvgSumColumns(arr_1));
