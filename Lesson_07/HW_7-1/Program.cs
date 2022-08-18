@@ -43,3 +43,4 @@ void WriteArray(double[,] arr)
         Console.WriteLine();
     }
 }
+
