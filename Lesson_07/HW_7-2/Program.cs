@@ -44,17 +44,18 @@ string SetCoordinates(int [,] arr)
 {
     int x = arr.GetLength(0);
     int y = arr.GetLength(1);
+    int a = x * y;
 
     {
-        for (int i = 0; i < arr.GetLength(0); i++)
+        for (int i = 0; i < x; i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        for (int j = 0; j < y; j++)
         {
-            if (arr[i, j] == x && arr[j, i] == y)
-                return $" {i + 1} {j + 1}";
+            if (arr[i, j] == x * y)
+                return $" {a}";
         }
     }
-    return "Invalid element";
+    return "Invalid coordinates";
 }
 }
 
