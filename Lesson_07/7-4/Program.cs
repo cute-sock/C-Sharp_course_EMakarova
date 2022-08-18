@@ -52,9 +52,9 @@ string FirstExposition (int [,] arr, int a)
     return "No";
 }
 
-Console.Write("Enter the number of rows: ");
+Console.Write("Number of rows: ");
 int row = int.Parse(Console.ReadLine());
-Console.Write("Enter the number of columns: ");
+Console.Write("Number of columns: ");
 int column = int.Parse(Console.ReadLine());
 
 int[,] arr_1 = MassNums(row, column, 1, 11);
