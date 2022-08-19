@@ -2,3 +2,10 @@
 // возводит число А в целую степень B с помощью рекурсии.
 // A = 3; B = 5 -> 243 (3⁵)
 // A = 2; B = 3 -> 8
+
+int degree(int a, int b)
+{
+    if (b == 0) return 1;
+    return degree(a, b-1) * a;
+}
+Console.WriteLine(degree(2, 3));
