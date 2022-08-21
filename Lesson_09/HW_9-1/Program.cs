@@ -17,6 +17,7 @@
 
 // https://youtu.be/rh1mP02NFoM?t=229
 // https://skillbox.ru/media/code/rekursiya-vokrug-nas/
-// https://docs.microsoft.com/ru-ru/archive/msdn-magazine/2012/december/csharp-matrix-decomposition
+// 
+//https://docs.microsoft.com/ru-ru/archive/msdn-magazine/2012/december/csharp-matrix-decomposition
 
 
