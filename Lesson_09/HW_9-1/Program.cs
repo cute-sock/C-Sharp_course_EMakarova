@@ -8,3 +8,41 @@
 // не звыбть условия выхода
 // потом четность/нечетность, потом вывод
 
+
+// _____ ver.1 ___________________________________________________________________________
+
+void EvenValuesMN(int min, int max)
+{
+    if (min < max) return;
+    min = min % 2;
+    min++;
+    EvenValuesMN(min, max - 1);
+    Console.Write($"{max} ");
+
+}
+Console.WriteLine(EvenValuesMN(1, 10));
+
+
+// _____ ver.2 ___________________________________________________________________________
+
+int EvenValuesMN(int min, int max)
+{
+    if (min < max) ;
+    return min % 2 == 0;
+
+    EvenValuesMN(min, max - 1);
+    Console.Write($"{max} ");
+}
+
+Console.WriteLine(EvenValuesMN(0, 10));
+EvenValuesMN(0, 10);
+
+
+// _____ ver.3 ___________________________________________________________________________
+void EvenValuesMN(int min, int max)
+{
+    if (min % 2 == 0) return;
+    EvenValuesMN(min, max - 1);
+    Console.Write($"{max} ");
+}
+Console.WriteLine(EvenValuesMN(0, 10));
