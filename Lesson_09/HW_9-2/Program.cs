@@ -13,11 +13,11 @@ int SumMN(int m, int n, int sum)
 
     while (m <= n)
     {
-        Console.Write(m + " ");
         sum += m;
         m++;
+        
     }
     return sum;
 }
 
-Console.WriteLine(SumMN(1, 3, 0));
+Console.WriteLine(SumMN(1, 10, 0));
